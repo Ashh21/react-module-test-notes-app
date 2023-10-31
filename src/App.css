@@ -48,20 +48,18 @@
   display: flex;
 }
 
-/* .pop-up {
+.pop-up {
   position: absolute;
   top: 30%;
   left: 30%;
   padding: 0.5rem;
-} */
+}
 
-/* .create-group-div {
-  padding: 2rem 1rem;
+.create-group-div {
+  height: 200px;
   background-color: #fff;
   border-radius: 0.375rem;
-  width: 35rem;
-  height: 14rem;
-} */
+}
 
 .create-group-input {
   border: 1px solid gray;
@@ -69,6 +67,12 @@
   margin-top: 0.25rem;
   padding: 0 0.5rem;
   width: 15rem;
+}
+
+.create-btn-div {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 1rem;
 }
 
 .create-btn {
@@ -174,18 +178,18 @@
     padding: 2rem 0;
   }
 
-  .user h1{
+  .user h1 {
     padding-left: 1rem;
     font-size: 2rem;
   }
 
-  .user-div{
+  .user-div {
     width: 100vw;
     padding: 1rem 0;
     text-align: center;
   }
 
-  .user-create-btn{
+  .user-create-btn {
     background: #000;
     color: #fff;
     padding: 0.375rem 0;
@@ -195,25 +199,31 @@
     font-size: 1rem;
   }
 
-  .pop-up{
+  .pop-up {
     position: absolute;
     bottom: 50%;
     left: 17%;
   }
 
-  .create-group-div{
+  .create-group-div {
     width: 284px;
-    height: 211px;
+    height: 200px;
     background-color: #fff;
     border-radius: 0.375rem;
   }
 
-  .create-group-input{
+  .create-group-input {
     border: 1px solid gray;
     border-radius: 1rem;
     width: 50%;
     height: 1.5rem;
     font-size: 0.7rem;
+  }
+
+  .create-btn-div {
+    position: absolute;
+    left: 35%;
+    bottom: -1.7rem ;
   }
 
   .create-btn {
@@ -222,7 +232,7 @@
     font-size: 0.5rem;
     line-height: 1.25rem;
     padding: 0 1.75rem;
-    margin-right: 0.5rem;
+    margin: 0.5rem 0;
     border-radius: 0.375rem;
     border: none;
     cursor: pointer;

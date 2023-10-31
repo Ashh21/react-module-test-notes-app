@@ -70,14 +70,22 @@ const CreateUserGroup = () => {
                 display: "flex",
                 flexDirection: "column"
             }}>
-                <span style={{ color: "black", padding: "0 1rem", fontSize: "0.6rem" }}>{error.groupName}
+                <span style={{
+                    color: "black",
+                    padding: "0.2rem 1rem 0",
+                    fontSize: "0.6rem"
+                }}>{error.groupName}
                 </span>
 
-                <span style={{ color: "black", padding: "0 1rem", fontSize: "0.6rem" }}> {error.selectColor}
+                <span style={{
+                    color: "black",
+                    padding: "0.2rem 1rem 0",
+                    fontSize: "0.6rem"
+                }}> {error.selectColor}
                 </span>
             </div>
 
-            <div style={{ position: 'absolute', left: "35%", bottom: "1rem" }}>
+            <div className='create-btn-div'>
                 <button className='create-btn'
                     onClick={createHandler}>Create</button>
             </div>

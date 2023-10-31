@@ -3,29 +3,30 @@ import { useSelector } from 'react-redux'
 
 const UserCard = () => {
     const userInfo = useSelector((store) => store.user.users)
-    console.log(userInfo)
+
     return (
         <div>
             {
-                userInfo.map((u) => (
+                userInfo.map((user) => (
                     <div style={{
                         display: "flex",
                         padding: "1rem",
                     }}
-                        key={u.id}
-                    // id={u.id}
-                    // onClick={() => setSelected(u.id)}
+                        key={user.id}
+                        id={user.id}
+                    // onClick={() => setSelected(user.id)}
                     >
-                        <div className='user-info' style={{ backgroundColor: u.selectColor }}>
+                        <div className='user-info' style={{ backgroundColor: user.selectColor }}>
                             <h1 style={{
-                                fontSize: "1.5rem", paddingTop: "0.5rem"
-                            }}> {u?.groupName?.slice(0,2)}</h1>
+                                fontSize: "1.5rem",
+                                padding: "0.5rem"
+                            }}> {user?.groupName?.slice(0, 2)}</h1>
                         </div>
                         <h1 style={{
                             fontSize: "1.25rem",
                             padding: "0.5rem"
                         }}
-                        >{u.groupName} </h1>
+                        >{user.groupName} </h1>
                     </div>
                 ))
             }

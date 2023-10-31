@@ -1,11 +1,13 @@
 import React from 'react'
-import { UserSection } from './UserSection'
-import { CreateUserGroup } from './CreateUserGroup'
+import { UserSection } from './user/UserSection'
+import { CreateUserGroup } from './user/CreateUserGroup'
+// import { NotesSection } from './notes/NotesSection'
 
 const Body = () => {
     return (
-        <div>
+        <div className=''>
             <UserSection />
+            {/* <NotesSection /> */}
             <div className='pop-up'>
                 <CreateUserGroup />
             </div>

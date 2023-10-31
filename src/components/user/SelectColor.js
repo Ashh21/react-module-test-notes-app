@@ -8,10 +8,14 @@ const SelectColor = ({ onChangeColor }) => {
     }
 
     return (
-        <div>
+        <div style={{
+            display: "flex",
+            alignItems: "center",
+            padding: "1rem"
+        }}>
             <h2 style={{
-                fontSize: "1.9rem",
-                padding: " 0 1rem",
+                fontSize: "1rem",
+                paddingRight: "1rem",
                 fontWeight: "500"
             }}
             >Choose color</h2>

@@ -48,20 +48,20 @@
   display: flex;
 }
 
-.pop-up {
+/* .pop-up {
   position: absolute;
   top: 30%;
   left: 30%;
   padding: 0.5rem;
-}
+} */
 
-.create-group-div {
+/* .create-group-div {
   padding: 2rem 1rem;
   background-color: #fff;
   border-radius: 0.375rem;
   width: 35rem;
   height: 14rem;
-}
+} */
 
 .create-group-input {
   border: 1px solid gray;
@@ -92,37 +92,38 @@
   cursor: pointer;
 }
 
+/* 
 .notes-area {
   display: flex;
   flex-direction: column;
   width: 80vw;
   height: 97Vh;
 
-}
+} */
 
-.notes-user-info {
+/* .notes-user-info {
   height: 10vh;
   background-color: #E8E8E8;
-}
+}  */
 
-.notes-div {
+/* .notes-div {
   height: 70vh;
   background-color: #F7ECDC;
   overflow-y: scroll;
-}
+}  */
 
-.notes-section {
+/* .notes-section {
   display: flex;
   padding: 1rem 1rem 0;
-}
+} */
 
-.textarea-div {
+/* .textarea-div {
   border-bottom-left-radius: 0.75rem;
   background-color: #E8E8E8;
   
-}
+} */
 
-.notes-text-area {
+/* .notes-text-area {
   position: relative;
   width: 70vw;
   margin: 0.8rem 1.2rem;
@@ -132,7 +133,7 @@
   border-radius: 0.5rem;
   text-align: start;
   padding: 0.5rem 0 0 0.5rem;
-}
+} */
 
 .notes-btn {
   position: absolute;
@@ -143,7 +144,7 @@
   cursor: pointer;
 }
 
-.notes-time {
+/* .notes-time {
   display: flex;
   flex-direction: column;
   width: 20%;
@@ -153,4 +154,88 @@
 .notes-content{
   width: 80%;
   padding: 1rem;
+} */
+
+
+
+
+/* Mobile  */
+
+@media only screen and (max-width: 600px) {
+  .App {
+    background-color: #87ceeb;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .user h1{
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+
+  .user-div{
+    width: 100vw;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .user-create-btn{
+    background: #000;
+    color: #fff;
+    padding: 0.375rem 0;
+    border-radius: 1rem;
+    border: none;
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .pop-up{
+    position: absolute;
+    bottom: 50%;
+    left: 17%;
+  }
+
+  .create-group-div{
+    width: 284px;
+    height: 211px;
+    background-color: #fff;
+    border-radius: 0.375rem;
+  }
+
+  .create-group-input{
+    border: 1px solid gray;
+    border-radius: 1rem;
+    width: 50%;
+    height: 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .create-btn {
+    background-color: black;
+    color: white;
+    font-size: 0.5rem;
+    line-height: 1.25rem;
+    padding: 0 1.75rem;
+    margin-right: 0.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .color-select-btn {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.1rem;
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+  }
+
+
 }

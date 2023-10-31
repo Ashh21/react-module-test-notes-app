@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Roboto&family=Single+Day&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.create-notes {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+}
+
+.create-notes-btn {
+  background-color: black;
+  color: white;
+  padding: 0.25rem 1.25rem;
+  margin: 1rem 2rem 0;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  font-family: 'Roboto';
+  border: none;
+  cursor: pointer;
+}
+
+.user-notes-div {
+  overflow-y: auto;
+  padding: 0.51rem 1rem 0;
+}
+
+.user-info {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.body {
+  display: flex;
+}
+
+.pop-up {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  padding: 0.5rem;
+}
+
+.create-group-div {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  width: 35rem;
+  height: 14rem;
+}
+
+.create-group-input {
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin-top: 0.25rem;
+  padding: 0 0.5rem;
+  width: 15rem;
+}
+
+.create-btn {
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0 1.75rem;
+  margin-right: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.color-select-btn {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.25rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.notes-area {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 97Vh;
+
+}
+
+.notes-user-info {
+  height: 10vh;
+  background-color: #E8E8E8;
+}
+
+.notes-div {
+  height: 70vh;
+  background-color: #F7ECDC;
+  overflow-y: scroll;
+}
+
+.notes-section {
+  display: flex;
+  padding: 1rem 1rem 0;
+}
+
+.textarea-div {
+  border-bottom-left-radius: 0.75rem;
+  background-color: #E8E8E8;
+  
+}
+
+.notes-text-area {
+  position: relative;
+  width: 70vw;
+  margin: 0.8rem 1.2rem;
+  height: 20vh;
+  outline: none;
+  border: 1px solid #CCC;
+  border-radius: 0.5rem;
+  text-align: start;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
+.notes-btn {
+  position: absolute;
+  right: 3%;
+  bottom: 7%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.notes-time {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 1rem;
+}
+
+.notes-content{
+  width: 80%;
+  padding: 1rem;
+}

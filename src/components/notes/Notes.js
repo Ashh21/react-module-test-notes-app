@@ -1,8 +1,27 @@
 import React from 'react'
 
-const Notes = () => {
+const Notes = ({ showNotes }) => {
+
     return (
-        <div>Notes</div>
+        < >
+            {
+                showNotes.map(note => (
+                    <div className='notes-div'
+                        key={note.id}
+                        id={note.id}
+                    >
+                        <div className='notes-time'>
+                            <span>{note.currentTime}</span>
+                            <span>{note.date}</span>
+                        </div>
+
+                        <div className='notes-content'>
+                            {note.textInput}
+                        </div>
+                    </div>
+                ))
+            }
+        </>
     )
 }
 

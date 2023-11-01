@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import PopUpSlice from "./PopUpSlice";
-import UserSlice from "./UserSlice";
+import PopUpSlice from "./popUpSlice";
+import UserSlice from "./userSlice";
 
 const store = configureStore({
     reducer: {

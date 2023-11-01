@@ -11,7 +11,7 @@
   min-height: 100vh;
 }
 
-.create-notes {
+.user {
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -96,38 +96,37 @@
   cursor: pointer;
 }
 
-/* 
-.notes-area {
+
+.notes-section {
   display: flex;
   flex-direction: column;
   width: 80vw;
   height: 97Vh;
+}
 
-} */
-
-/* .notes-user-info {
+.notes-user-info {
   height: 10vh;
   background-color: #E8E8E8;
-}  */
+} 
 
-/* .notes-div {
+.notes-container {
   height: 70vh;
   background-color: #F7ECDC;
   overflow-y: scroll;
-}  */
+}
 
-/* .notes-section {
+.notes-div {
   display: flex;
   padding: 1rem 1rem 0;
-} */
+}
 
-/* .textarea-div {
+.textarea-div {
   border-bottom-left-radius: 0.75rem;
   background-color: #E8E8E8;
-  
-} */
 
-/* .notes-text-area {
+}
+
+.notes-text-area {
   position: relative;
   width: 70vw;
   margin: 0.8rem 1.2rem;
@@ -137,7 +136,7 @@
   border-radius: 0.5rem;
   text-align: start;
   padding: 0.5rem 0 0 0.5rem;
-} */
+}
 
 .notes-btn {
   position: absolute;
@@ -148,17 +147,17 @@
   cursor: pointer;
 }
 
-/* .notes-time {
+.notes-time {
   display: flex;
   flex-direction: column;
   width: 20%;
   padding: 1rem;
 }
 
-.notes-content{
+.notes-content {
   width: 80%;
   padding: 1rem;
-} */
+}
 
 
 
@@ -170,6 +169,10 @@
     background-color: #87ceeb;
     width: 100vw;
     height: 100vh;
+  }
+
+  .body{
+    display:unset ;
   }
 
   .user {
@@ -223,7 +226,7 @@
   .create-btn-div {
     position: absolute;
     left: 35%;
-    bottom: -1.7rem ;
+    bottom: -1.7rem;
   }
 
   .create-btn {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { SelectColor } from './SelectColor'
 import { useDispatch, useSelector } from 'react-redux'
-import { addUser } from '../../redux/UserSlice'
-import { closePopUp } from '../../redux/PopUpSlice'
+import { addUser } from '../../redux/userSlice'
+import { closePopUp } from '../../redux/popUpSlice'
 import uuid from 'react-uuid'
 
 

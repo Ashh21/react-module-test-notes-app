@@ -18,15 +18,15 @@ const UserCard = ({ user, index }) => {
         >
             <div className='user-info' style={{ backgroundColor: user.selectColor, color: 'white' }}>
                 <h1 style={{
-                    fontSize: "1.75rem",
+                    fontSize: "1.6rem",
                     paddingTop: "0.66rem"
                 }}> {user?.groupName?.slice(0, 2)}</h1>
             </div>
             <h1 style={{
-                fontSize: "1.75rem",
+                fontSize: "1.7rem",
                 padding: "0.5rem"
             }}
-            >{user.groupName} </h1>
+            >{user?.groupName} </h1>
         </div>
     )
 }

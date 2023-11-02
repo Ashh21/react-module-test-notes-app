@@ -23,10 +23,13 @@ const NotesSection = () => {
                 textInput, currentTime, date, id: uuid()
             }
             dispatch(addNotes(newNotes))
+            localStorage.setItem('notes', JSON.stringify(newNotes))
             setTextInput("")
         }
     }
 
+    const savedNotes = JSON?.parse(localStorage?.getItem('notes'))
+    console.log(savedNotes)
 
     return (
         <div className='notes-section' onClick={() => dispatch(closePopUp())}>

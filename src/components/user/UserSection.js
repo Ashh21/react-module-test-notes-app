@@ -19,7 +19,7 @@ const UserSection = () => {
             <div className='user-div'>
                 <button className='user-create-btn' onClick={toggleHandler}> + Create Notes group</button>
             </div>
-            <div className='user-notes-div'>
+            <div className='user-notes-div'  >
                 <UsersList />
             </div>
         </div >

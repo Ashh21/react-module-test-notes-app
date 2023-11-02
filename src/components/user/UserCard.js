@@ -14,18 +14,16 @@ const UserCard = ({ user, index }) => {
             display: "flex",
             padding: "1rem",
         }}
-            key={user.id}
-            id={user.id}
             onClick={() => selectHandler(index)}
         >
-            <div className='user-info' style={{ backgroundColor: user.selectColor }}>
+            <div className='user-info' style={{ backgroundColor: user.selectColor, color: 'white' }}>
                 <h1 style={{
-                    fontSize: "1.5rem",
-                    padding: "0.5rem"
+                    fontSize: "1.75rem",
+                    paddingTop: "0.66rem"
                 }}> {user?.groupName?.slice(0, 2)}</h1>
             </div>
             <h1 style={{
-                fontSize: "1.25rem",
+                fontSize: "1.75rem",
                 padding: "0.5rem"
             }}
             >{user.groupName} </h1>

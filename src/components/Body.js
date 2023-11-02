@@ -3,7 +3,13 @@ import { UserSection } from './user/UserSection'
 import { CreateUserGroup } from './user/CreateUserGroup'
 import { NotesSection } from './notes/NotesSection'
 
+// import { togglePopUp } from '../redux/popUpSlice'
+
 const Body = () => {
+
+    // const style = {
+    //     backgroundColor: togglePopUp() && 'red'
+    // }
 
     return (
         <div className='body' >

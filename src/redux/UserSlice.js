@@ -5,6 +5,7 @@ const userSlice = createSlice({
     initialState: {
         users: [],
         selectedUserIndex: -1,
+        notes: [],
     },
     reducers: {
         addUser: (state, action) => {
@@ -13,11 +14,15 @@ const userSlice = createSlice({
 
         setSelectedUserIndex: (state, action) => {
             state.selectedUserIndex = action.payload.index
+        },
+
+        addNotes: (state, action) => {
+            state.notes.push(action.payload)
         }
     }
 
 })
 
-export const { addUser, setSelectedUserIndex } = userSlice.actions;
+export const { addUser, setSelectedUserIndex, addNotes } = userSlice.actions;
 
 export default userSlice.reducer

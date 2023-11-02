@@ -34,6 +34,7 @@ const CreateUserGroup = () => {
             dispatch(addUser({ groupName, selectColor, id: uuid() }))
             dispatch(closePopUp())
             setGroupName("")
+            setSelectColor("")
             setError("")
         }
 

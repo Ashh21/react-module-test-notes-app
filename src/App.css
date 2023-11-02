@@ -11,47 +11,65 @@
   min-height: 100vh;
 }
 
+.body {
+  display: flex;
+  overflow: hidden;
+}
+
 .user {
   display: flex;
   flex-direction: column;
   width: 30vw;
   height: 100vh;
+  padding: 2rem 0;
 }
 
-.create-notes-btn {
-  background-color: black;
-  color: white;
-  padding: 0.25rem 1.25rem;
-  margin: 1rem 2rem 0;
-  font-size: 1.5rem;
-  border-radius: 2rem;
-  font-family: 'Roboto';
+.user-div {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+
+.user-create-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.375rem 0;
+  border-radius: 1.5rem;
   border: none;
+  width: 90%;
+  font-size: 1.75rem;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .user-notes-div {
-  overflow-y: auto;
-  padding: 0.51rem 1rem 0;
+  overflow-y: scroll;
+}
+
+.user-notes-div::-webkit-scrollbar {
+  width: 12px;
+}
+
+.user-notes-div::-webkit-scrollbar-thumb {
+  background-color: #b48bfaa9;
+  border-radius: 20px;
+  border: 2px solid rgba(226, 221, 221, 0.551);
 }
 
 .user-info {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 2rem;
   border: none;
   text-align: center;
   margin-right: 1rem;
-}
-
-.body {
-  display: flex;
+  flex-shrink: 0;
 }
 
 .pop-up {
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 40%;
   padding: 0.5rem;
 }
 
@@ -105,14 +123,26 @@
 }
 
 .notes-user-info {
+  display: flex;
+  align-items: center;
   height: 10vh;
   background-color: #E8E8E8;
-} 
+}
 
 .notes-container {
   height: 70vh;
   background-color: #F7ECDC;
   overflow-y: scroll;
+}
+
+.notes-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+  background-color: #F7ECDC;
+  border-radius: 20px;
+  border: 2px solid rgba(15, 14, 14, 0.764);
 }
 
 .notes-div {
@@ -152,11 +182,13 @@
   flex-direction: column;
   width: 20%;
   padding: 1rem;
+  font-size: 1.25rem;
 }
 
 .notes-content {
   width: 80%;
   padding: 1rem;
+  font-size: 1.25rem;
 }
 
 
@@ -171,35 +203,15 @@
     height: 100vh;
   }
 
-  .body{
-    display:unset ;
+  .body {
+    display: unset;
   }
 
   .user {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
-  }
-
-  .user h1 {
-    padding-left: 1rem;
-    font-size: 2rem;
-  }
-
-  .user-div {
-    width: 100vw;
-    padding: 1rem 0;
-    text-align: center;
-  }
-
-  .user-create-btn {
-    background: #000;
-    color: #fff;
-    padding: 0.375rem 0;
-    border-radius: 1rem;
-    border: none;
-    width: 90%;
-    font-size: 1rem;
+    width: 100%;
   }
 
   .pop-up {
@@ -250,5 +262,29 @@
     cursor: pointer;
   }
 
+  .user-notes-div {
+    width: 100%;
+  }
+
+  .notes-container{
+    width: 100%;
+    overflow-x:hidden ;
+  }
+
+
+  .notes-section {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+ 
+  .notes-text-area{
+    width: 90% ;
+  }
+
+  .textarea-div{
+    width: 100%;
+  }
 
 }

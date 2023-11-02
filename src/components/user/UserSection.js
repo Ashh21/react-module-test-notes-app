@@ -12,14 +12,17 @@ const UserSection = () => {
 
     return (
         <div className='user'>
-            <h1>Pocket Notes</h1>
+            <h1 style={{
+                fontSize: "1.8rem",
+                paddingLeft: "1rem",
+            }}>Pocket Notes</h1>
             <div className='user-div'>
                 <button className='user-create-btn' onClick={toggleHandler}> + Create Notes group</button>
             </div>
             <div className='user-notes-div'>
                 <UsersList />
             </div>
-        </div>
+        </div >
     )
 }
 

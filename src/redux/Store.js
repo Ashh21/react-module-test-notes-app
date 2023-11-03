@@ -4,7 +4,7 @@ import UserSlice from "./userSlice";
 
 const store = configureStore({
     reducer: {
-        app: PopUpSlice,
+        popUp: PopUpSlice,
         user: UserSlice,
     }
 })

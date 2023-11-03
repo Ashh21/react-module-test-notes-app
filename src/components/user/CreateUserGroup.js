@@ -11,7 +11,7 @@ const CreateUserGroup = () => {
     const [groupName, setGroupName] = useState("")
     const [error, setError] = useState("")
     const dispatch = useDispatch()
-    const isOpen = useSelector((store) => store.app.isOpen)
+    const isOpen = useSelector((store) => store.popUp.isOpen)
 
     const handleSelectColor = (color) => {
         setSelectColor(color)

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const popUpSlice = createSlice({
-    name: 'pop-up',
+    name: 'popUp',
     initialState: {
         isOpen: false,
     },

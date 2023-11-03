@@ -1,8 +1,9 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedUserIndex } from '../../redux/userSlice'
 
 const UserCard = ({ user, index }) => {
+    const selected = useSelector((store) => store.user.selectedUserIndex)
     const dispatch = useDispatch()
 
     const selectHandler = (index) => {
@@ -13,10 +14,11 @@ const UserCard = ({ user, index }) => {
         <div style={{
             display: "flex",
             padding: "1rem",
-        }}
+        }} className={index === selected && 'user-bg'}
             onClick={() => selectHandler(index)}
         >
-            <div className='user-info' style={{ backgroundColor: user.selectColor, color: 'white' }}>
+            <div className='user-info'
+                style={{ backgroundColor: user.selectColor, color: 'white' }}>
                 <h1 style={{
                     fontSize: "1.6rem",
                     paddingTop: "0.66rem"

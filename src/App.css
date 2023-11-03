@@ -16,6 +16,12 @@
   overflow: hidden;
 }
 
+.body-bg {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: rgba(47, 47, 47, 0.75);
+}
+
 .user {
   display: flex;
   flex-direction: column;
@@ -44,6 +50,7 @@
 
 .user-notes-div {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .user-notes-div::-webkit-scrollbar {
@@ -51,9 +58,13 @@
 }
 
 .user-notes-div::-webkit-scrollbar-thumb {
-  background-color: #b48bfaa9;
+  /* background-color: #b48bfaa9; */
   border-radius: 20px;
-  border: 2px solid rgba(226, 221, 221, 0.551);
+  border: 2px solid rgba(53, 51, 51, 0.551);
+}
+
+.user-bg {
+  background-image: url(./images/Rectangle\ 33.svg);
 }
 
 .user-info {
@@ -126,13 +137,14 @@
   display: flex;
   align-items: center;
   height: 10vh;
-  background-color: #E8E8E8;
+  background-image: url(../src/images/Rectangle\ 23.svg);
 }
 
 .notes-container {
   height: 70vh;
-  background-color: #F7ECDC;
+  background-image: url(../src/images/Rectangle\ 22.svg);
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .notes-container::-webkit-scrollbar {
@@ -152,8 +164,7 @@
 
 .textarea-div {
   border-bottom-left-radius: 0.75rem;
-  background-color: #E8E8E8;
-
+  background-image: url(../src/images/Rectangle\ 23.svg);
 }
 
 .notes-text-area {
@@ -194,7 +205,6 @@
 
 
 
-
 /* Mobile  */
 
 @media only screen and (max-width: 600px) {
@@ -212,6 +222,7 @@
     flex-direction: column;
     padding: 2rem 0;
     width: 100%;
+    padding: 2rem 0;
   }
 
   .pop-up {
@@ -272,7 +283,7 @@
     width: 100vw;
     height: 100vh;
   }
-  
+
   .notes-container {
     width: 100%;
     height: 80vh;

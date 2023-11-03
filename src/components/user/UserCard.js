@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedUserIndex } from '../../redux/userSlice'
 
@@ -14,7 +14,7 @@ const UserCard = ({ user, index }) => {
         <div style={{
             display: "flex",
             padding: "1rem",
-        }} className={index === selected && 'user-bg'}
+        }} className={index === selected ? 'user-bg' : undefined}
             onClick={() => selectHandler(index)}
         >
             <div className='user-info'

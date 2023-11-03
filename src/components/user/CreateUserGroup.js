@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SelectColor } from './SelectColor'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../../redux/userSlice'
@@ -17,7 +17,6 @@ const CreateUserGroup = () => {
         setSelectColor(color)
     }
 
-    if (!isOpen) return null;
 
     const createHandler = () => {
         const newErrors = {}
@@ -43,6 +42,8 @@ const CreateUserGroup = () => {
             setError(newErrors)
         }
     }
+
+    if (!isOpen) return null;
 
     return (
         <div className='create-group-div'>

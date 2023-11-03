@@ -299,4 +299,12 @@
     width: 100%;
   }
 
+  .user-bg {
+    background-image: none;
+  }
+
+  .show-components{
+    display: none;
+  }
+
 }

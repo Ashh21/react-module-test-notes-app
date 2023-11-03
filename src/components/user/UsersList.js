@@ -6,9 +6,6 @@ import { useSelector } from 'react-redux'
 const UsersList = () => {
     const userInfo = useSelector((store) => store.user.users)
 
-    // const style = { backgroundColor: selected === '0' && '#F7ECDC' }
-
-    console.log(userInfo)
     return (
         < >
             {

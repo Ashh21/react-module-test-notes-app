@@ -31,7 +31,8 @@ const CreateUserGroup = () => {
         }
 
         if (Object.keys(newErrors).length === 0) {
-            dispatch(addUser({ groupName, selectColor, id: uuid() }))
+            const user = { groupName, selectColor, id: uuid() }
+            dispatch(addUser({ user }))
             dispatch(closePopUp())
             setGroupName("")
             setSelectColor("")

@@ -3,13 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const userSlice = createSlice({
     name: 'user',
     initialState: {
-        users: [],
+        users: JSON.parse(localStorage.getItem("users"))||[],
         selectedUserIndex: -1,
-        notes: [],
+        notes: JSON.parse(localStorage.getItem("notes")) || [],
     },
     reducers: {
         addUser: (state, action) => {
-            state.users.push(action.payload)
+            state.users.push(action.payload.user)
+            localStorage.setItem('users', JSON.stringify(state.users))
+
         },
 
         setSelectedUserIndex: (state, action) => {
@@ -17,7 +19,8 @@ const userSlice = createSlice({
         },
 
         addNotes: (state, action) => {
-            state.notes.push(action.payload)
+            state.notes.push(action.payload.note)
+            localStorage.setItem('notes', JSON.stringify(state.notes))
         }
     }
 

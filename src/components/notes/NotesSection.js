@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { NotesCard } from './NotesCard'
+import { NotesList } from './NotesList'
 import uuid from 'react-uuid'
-import { UserCard } from '../user/UserCard'
+import { UserCard } from './UserCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { addNotes } from '../../redux/userSlice'
 import { closePopUp } from '../../redux/popUpSlice'
@@ -19,26 +19,22 @@ const NotesSection = () => {
                 day: 'numeric', month: 'long', year: "numeric"
             })
 
-            const newNotes = {
-                textInput, currentTime, date, id: uuid()
+            const newNote = {
+                textInput, currentTime, date, id: uuid(), userId: users?.[selectedUserIndex]?.id
             }
-            dispatch(addNotes(newNotes))
-            localStorage.setItem('notes', JSON.stringify(newNotes))
+            dispatch(addNotes({ note: newNote }))
             setTextInput("")
         }
     }
 
-    const savedNotes = JSON?.parse(localStorage?.getItem('notes'))
-    console.log(savedNotes)
-
     return (
         <div className='notes-section' onClick={() => dispatch(closePopUp())}>
             <div className='notes-user-info'>
-                {selectedUserIndex !== -1 && <UserCard user={users[selectedUserIndex]} index={selectedUserIndex} />}
+                {selectedUserIndex !== -1 && <UserCard user={users[selectedUserIndex]} />}
             </div>
 
             <div className='notes-container'>
-                <NotesCard />
+                <NotesList />
             </div>
 
             <div className='textarea-div'>

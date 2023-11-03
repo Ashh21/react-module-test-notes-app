@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { } from 'react'
+import { useSelector } from 'react-redux'
+import { NotesCard } from './NotesCard'
 
-const NotesList = ({ note }) => {
+const NotesList = () => {
+    const {users,notes,selectedUserIndex} = useSelector((store) => store?.user)
+
+    function getUserNotes(){
+       return notes.filter(note => note.userId === users?.[selectedUserIndex]?.id)
+    }
+    const userNotes = getUserNotes();
     return (
-        <div className='notes-div'
-        >
-            <div className='notes-time'>
-                <span>{note?.currentTime}</span>
-                <span >{note?.date}</span>
-            </div>
-
-            <div className='notes-content'>
-                {note?.textInput}
-            </div>
-        </div>
+        < >
+            {
+                userNotes.map(note => (
+                    <NotesCard key={note?.id}
+                        id={note?.id} note={note} />
+                ))
+            }
+        </>
     )
 }
 

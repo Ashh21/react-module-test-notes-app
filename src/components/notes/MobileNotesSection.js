@@ -29,6 +29,14 @@ const MobileNotesSection = () => {
         }
     }
 
+    const handleSendNotes = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            sendNotes();
+        }
+    }
+
+
     return (
         <div className='notes-section' onClick={() => dispatch(closePopUp())}>
             <div >
@@ -58,7 +66,10 @@ const MobileNotesSection = () => {
             </div>
 
             <div className='textarea-div'>
-                <textarea value={textInput} onChange={(e) => setTextInput(e.target.value)}
+                <textarea
+                    value={textInput}
+                    onKeyUp={handleSendNotes}
+                    onChange={(e) => setTextInput(e.target.value)}
                     className='notes-text-area'
                     type='text' placeholder='Enter your text here...........' />
                 <button className='notes-btn'

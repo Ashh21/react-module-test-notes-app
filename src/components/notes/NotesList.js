@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux'
 import { NotesCard } from './NotesCard'
 
 const NotesList = () => {
-    const {users,notes,selectedUserIndex} = useSelector((store) => store?.user)
+    const { users, notes, selectedUserIndex } = useSelector((store) => store?.user)
 
-    function getUserNotes(){
-       return notes.filter(note => note.userId === users?.[selectedUserIndex]?.id)
+    function getUserNotes() {
+        return notes.filter(note => note.userId === users?.[selectedUserIndex]?.id)
     }
     const userNotes = getUserNotes();
     return (

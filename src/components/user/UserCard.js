@@ -8,7 +8,6 @@ const UserCard = ({ user, index }) => {
     const selected = useSelector((store) => store.user.selectedUserIndex)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    console.log(screenWidth)
 
     const selectHandler = (index) => {
         if (screenWidth > 600) {

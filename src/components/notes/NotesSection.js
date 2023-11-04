@@ -12,7 +12,7 @@ const NotesSection = () => {
     const { users, selectedUserIndex } = useSelector((store) => store.user)
 
     const sendNotes = () => {
-        if (textInput.trim() !== '') {
+        if (textInput.trim() !== '' && !selectedUserIndex) {
             const currentTime = new Date().toLocaleString('en-us', { hour: 'numeric', minute: 'numeric', hour12: true })
 
             const date = new Date().toLocaleDateString('en-us', {
@@ -27,6 +27,14 @@ const NotesSection = () => {
         }
     }
 
+    const handleSendNotes = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            sendNotes();
+        }
+
+    }
+
     return (
         <div className='notes-section' onClick={() => dispatch(closePopUp())}>
             <div className='notes-user-info'>
@@ -38,7 +46,9 @@ const NotesSection = () => {
             </div>
 
             <div className='textarea-div'>
-                <textarea value={textInput} onChange={(e) => setTextInput(e.target.value)}
+                <textarea value={textInput}
+                    onKeyUp={handleSendNotes}
+                    onChange={(e) => setTextInput(e.target.value)}
                     className='notes-text-area'
                     type='text' placeholder='Enter your text here...........' />
                 <button className='notes-btn'

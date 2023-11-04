@@ -10,7 +10,7 @@ const UsersList = () => {
         < >
             {
                 userInfo?.map((user, index) => (
-                    <UserCard key={user.id} 
+                    <UserCard key={user.id}
                         id={user.id} user={user} index={index} />
                 ))
             }

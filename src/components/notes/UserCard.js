@@ -6,7 +6,7 @@ const UserCard = ({ user }) => {
         <div style={{
             display: "flex",
             padding: "1rem",
-        }} 
+        }}
         >
             <div className='user-info'
                 style={{ backgroundColor: user.selectColor, color: 'white' }}>

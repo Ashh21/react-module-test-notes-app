@@ -1,20 +1,41 @@
-import React, { } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedUserIndex } from '../../redux/userSlice'
+import { useNavigate } from 'react-router-dom';
 
 const UserCard = ({ user, index }) => {
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const selected = useSelector((store) => store.user.selectedUserIndex)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+    console.log(screenWidth)
 
     const selectHandler = (index) => {
-        dispatch(setSelectedUserIndex({ index }))
+        if (screenWidth > 600) {
+            dispatch(setSelectedUserIndex({ index }))
+        } else {
+            dispatch(setSelectedUserIndex({ index }))
+            navigate('/noteSection')
+        }
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div style={{
             display: "flex",
             padding: "1rem",
-        }} className={index === selected ? 'user-bg' : undefined}
+        }} className={index === selected ? 'user-bg' : 'user-mob'}
             onClick={() => selectHandler(index)}
         >
             <div className='user-info'
